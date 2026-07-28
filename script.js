@@ -25,13 +25,13 @@ const showWinner = (userWin, userChoice, compChoice) => {
         userScore++;
         userScorePara.innerText = userScore;
         console.log("you win");
-        msg.innerText = `You won! your ${userChoice} beats ${compChoice}`;
+        msg.innerText = `You won! your chose ${userChoice} and the computer chose ${compChoice}`;
         msg.style.backgroundColor = "green"
     }else{
         compScore++;
         compScorePara.innerText = compScore;
         console.log("you lost");
-        msg.innerText = `You lost! ${compChoice} beats your ${userChoice}`;
+        msg.innerText = `You lost! your chose ${compChoice} and the computer chose ${userChoice}`;
         msg.style.backgroundColor = "red"
     }
 }
