@@ -1,68 +1,206 @@
-* {
-  margin: 0;
-  padding: 0;
-  text-align: center;
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-h1 {
-  background-color: #081b31;
-  color: #fff;
-  height: 5rem;
-  line-height: 5rem;
+:root{
+    --bg:#0F172A;
+    --surface:#1E293B;
+    --surface-hover:#273449;
+    --primary:#6366F1;
+    --primary-hover:#818CF8;
+    --text:#F8FAFC;
+    --secondary:#94A3B8;
+    --border:#334155;
+    --success:#22C55E;
+    --danger:#EF4444;
+    --shadow:0 12px 30px rgba(0,0,0,.18);
+    --radius:20px;
 }
 
-.choice {
-  height: 165px;
-  width: 165px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+body{
+    font-family:"Poppins",sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px 20px;
 }
 
-.choice:hover {
-  cursor: pointer;
-  background-color: #081b31;
+
+
+.game-container{
+    width:min(1100px,100%);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
 }
 
-img {
-  height: 150px;
-  width: 150px;
-  object-fit: cover;
-  border-radius: 50%;
+
+
+.hero{
+    text-align:center;
+    margin-bottom:60px;
 }
 
-.choices {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 3rem;
-  margin-top: 5rem;
+.hero h1{
+    font-size:clamp(2.3rem,5vw,3.5rem);
+    font-weight:700;
+    letter-spacing:.5px;
 }
 
-.score-board {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2rem;
-  margin-top: 3rem;
-  gap: 5rem;
+.hero span{
+    color:var(--primary);
 }
 
-#user-score,
-#comp-score {
-  font-size: 4rem;
+.subtitle{
+    margin-top:14px;
+    color:var(--secondary);
+    font-size:1rem;
+    font-weight:400;
 }
 
-.msg-container {
-  margin-top: 5rem;
+
+.choices{
+   width:100%;
+    display:flex;
+    justify-content:center;
+    gap:32px;
+    flex-wrap:wrap;
+    margin-bottom:65px;
 }
 
-#msg {
-  background-color: #081b31;
-  color: #fff;
-  font-size: 2rem;
-  display: inline;
-  padding: 1rem;
-  border-radius: 1rem;
+.choice{
+    width:190px;
+    padding:30px 22px;
+    border-radius:var(--radius);
+    background:var(--surface);
+    border:1px solid var(--border);
+    cursor:pointer;
+    transition:
+    transform .25s ease,
+    background .25s ease,
+    border-color .25s ease,
+    box-shadow .25s ease;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:22px;
 }
+
+.choice:hover{
+    transform:translateY(-8px);
+    background:var(--surface-hover);
+    border-color:var(--primary);
+    box-shadow:var(--shadow);
+}
+
+.choice:active{
+    transform:scale(.97);
+}
+
+
+
+.icon{
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    background:#182235;
+    border:1px solid var(--border);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    transition:.25s;
+}
+
+.choice:hover .icon{
+    background:var(--primary);
+}
+
+.icon i{
+    font-size:2.6rem;
+    color:var(--text);
+    transition:.25s;
+}
+
+.choice p{
+    font-size:1rem;
+    font-weight:500;
+    color:var(--text);
+}
+
+
+
+.score-board{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:35px;
+    margin-bottom:55px;
+}
+
+.score{
+    width:170px;
+    padding:24px 20px;
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    text-align:center;
+    transition:.25s;
+}
+
+.score:hover{
+    border-color:var(--primary);
+    transform:translateY(-4px);
+}
+
+.score p{
+    font-size:3.2rem;
+    font-weight:700;
+    color:var(--text);
+    line-height:1;
+}
+
+.score span{
+    display:block;
+    margin-top:10px;
+    color:var(--secondary);
+    font-size:.95rem;
+    letter-spacing:.5px;
+    text-transform:uppercase;
+}
+
+.vs{
+    font-size:1.2rem;
+    font-weight:600;
+    color:var(--secondary);
+    letter-spacing:2px;
+}
+
+
+
+.msg-container{
+    display:flex;
+    justify-content:center;
+}
+
+#msg{
+    background:var(--surface);
+    color:var(--text);
+    border:1px solid var(--border);
+    border-radius:14px;
+    padding:16px 28px;
+    font-size:1rem;
+    font-weight:500;
+    transition:
+        background .25s,
+        color .25s,
+        transform .25s;
+
+    box-shadow:var(--shadow);
+}
+
