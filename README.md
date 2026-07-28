@@ -1,2 +1,2 @@
 
-stone-paper-scissors-git-main-diganta.vercel.app
+https://stone-paper-scissors-git-main-diganta.vercel.app/
