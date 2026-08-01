@@ -1,63 +1,50 @@
 
 
 @media (max-width:700px){
-
     body{
         padding:16px 12px;
     }
-
-    .hero{
+  .hero{
         margin-bottom:20px;
     }
-
     .hero h1{
         font-size:1.9rem;
     }
-
     .subtitle{
         margin-top:8px;
         font-size:.9rem;
     }
-
     .choices{
         gap:14px;
         margin-bottom:22px;
     }
-
     .choice{
         width:140px;
         padding:18px 14px;
         gap:14px;
     }
-
     .icon{
         width:65px;
         height:65px;
     }
-
     .icon i{
         font-size:1.7rem;
     }
-
     .score-board{
         gap:12px;
         margin-bottom:20px;
     }
-
     .score{
         width:120px;
         padding:14px;
     }
-
     .score p{
         font-size:2.2rem;
     }
-
     .score span{
         margin-top:6px;
         font-size:.8rem;
     }
-
     #msg{
         width:100%;
         text-align:center;
@@ -67,68 +54,54 @@
 }
 
 @media (max-width:500px){
-
     body{
         padding:12px;
     }
-
     .hero{
         margin-bottom:18px;
     }
-
     .hero h1{
         font-size:1.7rem;
     }
-
     .subtitle{
         font-size:.85rem;
     }
-
     .choices{
         justify-content:center;
         gap:12px;
         margin-bottom:18px;
     }
-
     .choice{
         width:140px;
         padding:16px 12px;
     }
-
     .icon{
         width:60px;
         height:60px;
     }
-
     .icon i{
         font-size:1.5rem;
     }
-
-    .score-board{
+   .score-board{
         width:100%;
         justify-content:space-between;
         gap:8px;
         margin-bottom:18px;
     }
-
     .score{
         flex:1;
         width:auto;
         padding:12px;
     }
-
     .score p{
         font-size:2rem;
     }
-
-    .score span{
+   .score span{
         font-size:.75rem;
     }
-
     .vs{
         font-size:.9rem;
     }
-
     #msg{
         width:100%;
         text-align:center;
@@ -136,20 +109,16 @@
         padding:10px 14px;
     }
 }
-
 ::-webkit-scrollbar{
     width:10px;
 }
-
 ::-webkit-scrollbar-track{
     background:var(--bg);
 }
-
 ::-webkit-scrollbar-thumb{
     background:var(--border);
     border-radius:20px;
 }
-
 ::-webkit-scrollbar-thumb:hover{
     background:var(--primary);
 }
