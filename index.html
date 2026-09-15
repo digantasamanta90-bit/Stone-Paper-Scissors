@@ -7,7 +7,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <link
         rel="stylesheet"
@@ -22,50 +22,84 @@
 <div class="game-container">
     <header class="hero">
         <h1>Rock <span>•</span> Paper <span>•</span> Scissors</h1>
-        <p class="subtitle">
-            Pick your move and challenge the computer.
-        </p>
+        <p class="subtitle">Pick your move to challenge the computer</p>
     </header>
 
-    <section class="choices">
-        <div class="choice" id="rock">
+    <!-- Scoreboard -->
+    <section class="score-board" aria-label="Scoreboard">
+        <div class="score user-card">
+            <span class="score-label">YOU</span>
+            <p id="user-score">0</p>
+        </div>
+        <div class="vs-badge">
+            <span>VS</span>
+        </div>
+        <div class="score comp-card">
+            <span class="score-label">COMPUTER</span>
+            <p id="comp-score">0</p>
+        </div>
+    </section>
+
+    <!-- Choices Controls -->
+    <section class="choices" aria-label="Game Choices">
+        <button class="choice" id="rock" type="button" aria-label="Choose Rock">
             <div class="icon">
                 <i class="fa-solid fa-hand-back-fist"></i>
             </div>
             <p>Rock</p>
-        </div>
-        <div class="choice" id="paper">
+        </button>
+
+        <button class="choice" id="paper" type="button" aria-label="Choose Paper">
             <div class="icon">
                 <i class="fa-solid fa-hand"></i>
             </div>
             <p>Paper</p>
-        </div>
-        <div class="choice" id="scissors">
+        </button>
+
+        <button class="choice" id="scissors" type="button" aria-label="Choose Scissors">
             <div class="icon">
                 <i class="fa-solid fa-hand-scissors"></i>
             </div>
             <p>Scissors</p>
+        </button>
+    </section>
+
+    <!-- Current Round Duel Arena -->
+    <section class="round-display" id="round-display" aria-live="polite">
+        <div class="battle-arena">
+            <div class="duel-side user-side">
+                <span class="side-title">YOU PICKED</span>
+                <div class="duel-slot" id="user-slot" aria-label="User selection">
+                    <i class="fa-solid fa-question"></i>
+                </div>
+                <p class="move-name" id="user-move-name">-</p>
+            </div>
+
+            <div class="duel-vs">
+                <span>VS</span>
+            </div>
+
+            <div class="duel-side comp-side">
+                <span class="side-title">CPU PICKED</span>
+                <div class="duel-slot" id="comp-slot" aria-label="Computer selection">
+                    <i class="fa-solid fa-question"></i>
+                </div>
+                <p class="move-name" id="comp-move-name">-</p>
+            </div>
+        </div>
+
+        <div class="result-box">
+            <div class="result-badge" id="result-badge">Choose your move to begin!</div>
+            <p class="result-detail" id="msg">First to score wins the round.</p>
         </div>
     </section>
 
-    <section class="score-board">
-        <div class="score">
-            <p id="user-score">0</p>
-            <span>You</span>
-        </div>
-        <div class="vs">
-            VS
-        </div>
-        <div class="score">
-            <p id="comp-score">0</p>
-            <span>COMPUTER</span>
-        </div>
-    </section>
-
-    <div class="msg-container">
-        <p id="msg">
-            Click a move to begin the match.
-        </p>
+    <!-- Reset / Play Again Control -->
+    <div class="controls-footer">
+        <button id="reset-btn" type="button" aria-label="Reset game score">
+            <i class="fa-solid fa-rotate-right"></i>
+            <span>Reset Game</span>
+        </button>
     </div>
 </div>
 

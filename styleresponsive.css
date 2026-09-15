@@ -1,124 +1,242 @@
+/* Responsive Styles for Rock Paper Scissors */
 
-
-@media (max-width:700px){
+@media (max-width: 768px){
     body{
-        padding:16px 12px;
+        padding:24px 16px;
     }
-  .hero{
-        margin-bottom:20px;
-    }
-    .hero h1{
-        font-size:1.9rem;
-    }
-    .subtitle{
-        margin-top:8px;
-        font-size:.9rem;
-    }
-    .choices{
-        gap:14px;
+
+    .hero{
         margin-bottom:22px;
     }
-    .choice{
-        width:140px;
-        padding:18px 14px;
-        gap:14px;
-    }
-    .icon{
-        width:65px;
-        height:65px;
-    }
-    .icon i{
-        font-size:1.7rem;
-    }
-    .score-board{
-        gap:12px;
-        margin-bottom:20px;
-    }
-    .score{
-        width:120px;
-        padding:14px;
-    }
-    .score p{
+
+    .hero h1{
         font-size:2.2rem;
     }
-    .score span{
-        margin-top:6px;
-        font-size:.8rem;
+
+    .score-board{
+        gap:14px;
+        margin-bottom:26px;
     }
-    #msg{
-        width:100%;
-        text-align:center;
-        font-size:.9rem;
-        padding:12px 18px;
+
+    .score{
+        padding:14px 12px;
+    }
+
+    .score p{
+        font-size:2.4rem;
+    }
+
+    .choices{
+        gap:16px;
+        margin-bottom:26px;
+    }
+
+    .choice{
+        width:145px;
+        padding:18px 12px;
+        gap:12px;
+    }
+
+    .icon{
+        width:68px;
+        height:68px;
+    }
+
+    .icon i{
+        font-size:1.85rem;
+    }
+
+    .round-display{
+        padding:20px 16px;
+        margin-bottom:22px;
+    }
+
+    .duel-slot{
+        width:74px;
+        height:74px;
+    }
+
+    .duel-slot i{
+        font-size:2rem;
     }
 }
 
-@media (max-width:500px){
+@media (max-width: 520px){
     body{
-        padding:12px;
+        padding:16px 12px;
     }
+
     .hero{
         margin-bottom:18px;
     }
+
     .hero h1{
-        font-size:1.7rem;
+        font-size:1.75rem;
     }
+
     .subtitle{
-        font-size:.85rem;
+        font-size:0.85rem;
+        margin-top:6px;
     }
-    .choices{
-        justify-content:center;
-        gap:12px;
-        margin-bottom:18px;
+
+    .score-board{
+        gap:10px;
+        margin-bottom:20px;
     }
-    .choice{
-        width:140px;
-        padding:16px 12px;
-    }
-    .icon{
-        width:60px;
-        height:60px;
-    }
-    .icon i{
-        font-size:1.5rem;
-    }
-   .score-board{
-        width:100%;
-        justify-content:space-between;
-        gap:8px;
-        margin-bottom:18px;
-    }
+
     .score{
-        flex:1;
-        width:auto;
-        padding:12px;
+        padding:12px 8px;
+        border-bottom-width:4px;
     }
+
+    .score-label{
+        font-size:0.75rem;
+    }
+
     .score p{
         font-size:2rem;
     }
-   .score span{
-        font-size:.75rem;
+
+    .vs-badge{
+        width:34px;
+        height:34px;
+        font-size:0.78rem;
     }
-    .vs{
-        font-size:.9rem;
+
+    .choices{
+        gap:10px;
+        margin-bottom:20px;
+        display:flex;
+        justify-content:center;
     }
-    #msg{
-        width:100%;
-        text-align:center;
-        font-size:.85rem;
-        padding:10px 14px;
+
+    .choice{
+        flex:1;
+        max-width:115px;
+        min-width:92px;
+        padding:14px 6px;
+        gap:10px;
+        border-bottom-width:4px;
+    }
+
+    .choice:active{
+        transform:translateY(2px);
+        border-bottom-width:2px;
+    }
+
+    .icon{
+        width:56px;
+        height:56px;
+    }
+
+    .icon i{
+        font-size:1.5rem;
+    }
+
+    .choice p{
+        font-size:0.88rem;
+    }
+
+    .round-display{
+        padding:16px 12px;
+        margin-bottom:18px;
+        border-radius:14px;
+    }
+
+    .battle-arena{
+        gap:8px;
+        margin-bottom:14px;
+    }
+
+    .duel-side{
+        min-width:85px;
+        gap:6px;
+    }
+
+    .side-title{
+        font-size:0.68rem;
+    }
+
+    .duel-slot{
+        width:60px;
+        height:60px;
+        border-width:2px;
+    }
+
+    .duel-slot i{
+        font-size:1.5rem;
+    }
+
+    .move-name{
+        font-size:0.82rem;
+    }
+
+    .duel-vs{
+        font-size:0.9rem;
+    }
+
+    .result-badge{
+        font-size:0.98rem;
+        padding:6px 16px;
+    }
+
+    .result-detail{
+        font-size:0.82rem;
+    }
+
+    #reset-btn{
+        padding:8px 16px;
+        font-size:0.85rem;
     }
 }
+
+@media (max-width: 360px){
+    .choices{
+        gap:6px;
+    }
+
+    .choice{
+        min-width:84px;
+        padding:12px 4px;
+    }
+
+    .icon{
+        width:48px;
+        height:48px;
+    }
+
+    .icon i{
+        font-size:1.3rem;
+    }
+
+    .choice p{
+        font-size:0.8rem;
+    }
+
+    .duel-slot{
+        width:52px;
+        height:52px;
+    }
+
+    .duel-slot i{
+        font-size:1.3rem;
+    }
+}
+
+/* Custom Scrollbar */
 ::-webkit-scrollbar{
-    width:10px;
+    width:8px;
 }
+
 ::-webkit-scrollbar-track{
     background:var(--bg);
 }
+
 ::-webkit-scrollbar-thumb{
     background:var(--border);
     border-radius:20px;
 }
+
 ::-webkit-scrollbar-thumb:hover{
     background:var(--primary);
 }
